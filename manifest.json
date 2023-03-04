@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Link Color Changer",
+  "version": "1.0",
+  "description": "Highlights links on a webpage based on keywords(regex)",
+  "permissions": [ "activeTab", "storage" ],
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": [ "content.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
